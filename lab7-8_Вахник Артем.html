@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кулінарна книга рецептів</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <header>
+        <h1>ТОРТИКИ & ТІСТЕЧКА</h1>
+    </header>
+
+    <main>
+        <input type="radio" id="all" name="filter" checked>
+        <input type="radio" id="pie" name="filter">
+        <input type="radio" id="roll" name="filter">
+        <input type="radio" id="cheesecakes" name="filter">
+        <input type="radio" id="cakelet" name="filter">
+        <input type="radio" id="cake" name="filter">
+        <input type="radio" id="bun" name="filter">
+
+        <section class="filters">
+            <div class="calories">
+                <h3>Фільтр за калоріями:</h3>
+                <input type="range" min="0" max="400" value="200">
+                <div class="cal-label">Від 0 до 400 кКал</div>
+            </div>
+            <div class="types">
+                <h3>Тип виробу:</h3>
+                <div class="filter-buttons">
+                    <label for="all">Всі</label>
+                    <label for="pie">Пиріг</label>
+                    <label for="roll">Рулет</label>
+                    <label for="cheesecakes">Сирники</label>
+                    <label for="cakelet">Тістечко</label>
+                    <label for="cake">Торт</label>
+                    <label for="bun">Булочка</label>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <div class="card pie">
+                <img src="img/applepie.jpg" alt="Пиріг">
+                <h3>Яблучний пиріг</h3>
+                <p>З цукровою пудрою</p>
+                <span class="cal">280 ккал</span>
+            </div>
+            <div class="card roll">
+                <img src="img/macpie.jpg" alt="Рулет">
+                <h3>Маковий рулет</h3>
+                <p>З густим маковим начинням</p>
+                <span class="cal">320 ккал</span>
+            </div>
+            <div class="card cheesecakes">
+                <img src="img/sernik.webp" alt="Сирники">
+                <h3>Сирники з родзинками</h3>
+                <p>З підсмаженою скоринкою</p>
+                <span class="cal">210 ккал</span>
+            </div>
+            <div class="card cakelet">
+                <img src="img/tistkart.jpeg" alt="Тістечко">
+                <h3>Тістечко "Картопля"</h3>
+                <p>З какао та горіхами</p>
+                <span class="cal">350 ккал</span>
+            </div>
+            <div class="card cake">
+                <img src="img/napoleon.webp" alt="Торт">
+                <h3>Наполеон</h3>
+                <p>З вершковим заварним кремом</p>
+                <span class="cal">380 ккал</span>
+            </div>
+            <div class="card bun">
+                <img src="img/watrushka.jpg" alt="Булочка">
+                <h3>Ватрушка з сиром</h3>
+                <p>З ніжним сирним начинням та малиною</p>
+                <span class="cal">190 ккал</span>
+            </div>
+            <div class="card pie">
+                <img src="img/vishneviypurig.jpg" alt="Пиріг">
+                <h3>Вишневий пиріг</h3>
+                <p>З кисло-солодкою вишнею</p>
+                <span class="cal">260 ккал</span>
+            </div>
+            <div class="card cake">
+                <img src="img/medovik.jpg" alt="Торт">
+                <h3>Медовик</h3>
+                <p>З медовими коржами та сметаною</p>
+                <span class="cal">340 ккал</span>
+            </div>
+            <div class="card bun">
+                <img src="img/bulkamac.jpg" alt="Булочка">
+                <h3>Булочка з маком</h3>
+                <p>З шоколадною глазур'ю</p>
+                <span class="cal">230 ккал</span>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-section">
+            <h4>Контакти</h4>
+            <p>email: email@gmail.com</p>
+        </div>
+        <div class="footer-section">
+            <h4>Автор</h4>
+            <p>Вахник Артем ПД-21</p>
+        </div>
+    </footer>
+</body>
+</html>
