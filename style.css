@@ -1,0 +1,287 @@
+input[type="radio"] {
+    display: none;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f8f8f8;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background: #ff9a8b;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.filters {
+    background: white;
+    padding: 25px 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filters h3 {
+    color: #555;
+}
+
+.calories {
+    text-align: center;
+    padding-right: 30px;
+    border-right: 2px solid #eee;
+    flex: 1;
+}
+
+.calories input {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.cal-label {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+}
+
+.types {
+    text-align: center;
+    flex: 2;
+    padding-left: 30px;
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.types label {
+    padding: 10px 18px;
+    background: #eee;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.types label:hover {
+    background: #ddd;
+}
+
+/* Стилі кнопок */
+#all:checked ~ .filters label[for="all"],
+#pie:checked ~ .filters label[for="pie"],
+#roll:checked ~ .filters label[for="roll"],
+#cheesecakes:checked ~ .filters label[for="cheesecakes"],
+#cakelet:checked ~ .filters label[for="cakelet"],
+#cake:checked ~ .filters label[for="cake"],
+#bun:checked ~ .filters label[for="bun"] {
+    background: #ff6b6b;
+    color: white;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* Стилі корточок */
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card h3 {
+    padding: 18px 18px 8px;
+    color: #333;
+}
+
+.card p {
+    padding: 0 18px;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.card .cal {
+    padding: 12px 18px 18px;
+    color: #ff6b6b;
+    font-weight: bold;
+    border-top: 1px solid #f0f0f0;
+}
+
+footer {
+    background: #333;
+    color: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-top: 35px;
+    display: flex;
+    justify-content:space-between;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.footer-section h4 {
+    color: #ff9a8b;
+    margin-bottom: 8px;
+}
+
+/* Стилі фільтрів */
+.card {
+    display: block;
+}
+
+#all:checked ~ .gallery .card {
+    display: block;
+}
+
+#pie:checked ~ .gallery .card {
+    display: none;
+}
+
+#pie:checked ~ .gallery .card.pie {
+    display: block;
+}
+
+#roll:checked ~ .gallery .card {
+    display: none;
+}
+
+#roll:checked ~ .gallery .card.roll {
+    display: block;
+}
+
+#cheesecakes:checked ~ .gallery .card {
+    display: none;
+}
+
+#cheesecakes:checked ~ .gallery .card.cheesecakes {
+    display: block;
+}
+
+#cakelet:checked ~ .gallery .card {
+    display: none;
+}
+
+#cakelet:checked ~ .gallery .card.cakelet {
+    display: block;
+}
+
+#cake:checked ~ .gallery .card {
+    display: none;
+}
+
+#cake:checked ~ .gallery .card.cake {
+    display: block;
+}
+
+#bun:checked ~ .gallery .card {
+    display: none;
+}
+
+#bun:checked ~ .gallery .card.bun {
+    display: block;
+}
+
+/* Планшет */
+@media (max-width: 1199px) {
+    body {
+        padding: 15px;
+        max-width: none;
+    }
+    
+    .filters {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .calories {
+        padding-right: 0;
+        padding-bottom: 20px;
+        border-right: none;
+        border-bottom: 1px solid #eee;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    
+    .types {
+        padding-left: 0;
+        width: 100%;
+    }
+    
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    footer {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+/* Телефон */
+@media (max-width: 729px) {
+    body {
+        padding: 10px;
+    }
+    
+    header {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .filters {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .filter-buttons {
+        flex-direction: column;
+    }
+    
+    .types label {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .card img {
+        height: 200px;
+    }
+    
+    footer {
+        padding: 15px;
+        margin-top: 25px;
+    }
+}
